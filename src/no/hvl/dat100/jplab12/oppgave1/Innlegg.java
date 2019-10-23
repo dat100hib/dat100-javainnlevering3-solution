@@ -23,6 +23,18 @@ public abstract class Innlegg {
 		// TODO - SLUTT
 	}
 
+	public Innlegg(int id, String bruker, String dato, int likes) {
+
+		// TODO - START
+		
+		this.id = id;
+		this.bruker = bruker;
+		this.dato = dato;
+		this.likes = likes;
+		
+		// TODO - SLUTT
+	}
+	
 	public String getBruker() {
 		return bruker;
 	}
@@ -43,14 +55,10 @@ public abstract class Innlegg {
 		return id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
-
 	public int getLikes() {
 		return likes;
 	}
-
+	
 	public void doLike () {
 		likes++;
 	}

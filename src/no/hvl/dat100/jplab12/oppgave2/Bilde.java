@@ -15,6 +15,10 @@ public class Bilde extends Innlegg {
 		this.url = url;
 	}
 
+	public Bilde(int id, String bruker, String dato, int likes, String url) {
+		super(id, bruker, dato, likes);
+		this.url = url;
+	}
 	
 	public String getUrl() {
 		return url;

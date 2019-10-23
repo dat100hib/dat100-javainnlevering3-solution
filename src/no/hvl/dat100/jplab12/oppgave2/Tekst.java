@@ -15,6 +15,11 @@ public class Tekst extends Innlegg {
 		this.tekst = tekst;
 	}
 	
+	public Tekst(int id, String bruker, String dato, int likes, String tekst) {
+		super(id, bruker, dato, likes);
+		this.tekst = tekst;
+	}
+	
 	public String getTekst() {
 		return tekst;
 	}
