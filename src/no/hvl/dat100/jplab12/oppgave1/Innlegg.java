@@ -70,4 +70,11 @@ public abstract class Innlegg {
 		return id + "\n" + bruker + "\n" + dato + "\n" + likes + "\n";
 				
 	}
+	
+	// Metoden nedenfor er kun for valgfri oppgave 6
+	public String toHTML() {
+		
+		return "\t\t<h2>" + bruker + "@" + dato + " " + "[" + likes + "]<h2>\n";
+				
+	}
 }

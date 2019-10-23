@@ -29,4 +29,11 @@ public class Tekst extends Innlegg {
 		return "TEKST" + "\n" + super.toString() + tekst + "\n";
 
 	}
+	
+	// Metoden nedenfor er kun for valgfri oppgave 6
+	public String toHTML() {
+			
+		return super.toHTML() + "\t\t<p>" + tekst + "<p>\n\t\t<hr>\n";
+				
+	}
 }
