@@ -2,15 +2,13 @@ package no.hvl.dat100.jplab12.oppgave1;
 
 public abstract class Innlegg {
 	
+	// TODO - deklarering av objektvariable
+	
 	private String bruker;
 	private String dato;
 	private int likes;
 	private int id;
-	
-	public Innlegg() {
-		super();
-	}
-	
+		
 	public Innlegg(int id, String bruker, String dato) {
 
 		// TODO - START
@@ -69,7 +67,7 @@ public abstract class Innlegg {
 	
 	@Override
 	public String toString() {
-		return id + ": " + bruker + " [" + dato + "] " + likes + "\n";
+		return id + "\n" + bruker + "\n" + dato + "\n" + likes + "\n";
 				
 	}
 }

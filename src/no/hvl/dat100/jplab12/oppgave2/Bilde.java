@@ -1,22 +1,16 @@
 package no.hvl.dat100.jplab12.oppgave2;
 
-import no.hvl.dat100.jplab12.oppgave1.*;
-
-public class Bilde extends Innlegg {
+public class Bilde extends Tekst {
 
 	private String url;
 
-	public Bilde() {
-		super();
-	}
-	
-	public Bilde(int id, String bruker, String dato, String url) {
-		super(id, bruker, dato);
+	public Bilde(int id, String bruker, String dato, String tekst, String url) {
+		super(id, bruker, dato, tekst);
 		this.url = url;
 	}
 
-	public Bilde(int id, String bruker, String dato, int likes, String url) {
-		super(id, bruker, dato, likes);
+	public Bilde(int id, String bruker, String dato, int likes, String tekst, String url) {
+		super(id, bruker, dato, likes,tekst);
 		this.url = url;
 	}
 	
@@ -30,7 +24,14 @@ public class Bilde extends Innlegg {
 
 	@Override
 	public String toString() {
-		return "BILDE" + "\n" + super.toString() + url + "\n";
+		return 
+				"BILDE" + "\n" + 
+				super.getId() + "\n" + 
+				super.getBruker() + "\n" + 
+				super.getDato() + "\n" + 
+				super.getLikes() + "\n" +
+				super.getTekst() + "\n" + 
+				url + "\n";
 
 	}
 

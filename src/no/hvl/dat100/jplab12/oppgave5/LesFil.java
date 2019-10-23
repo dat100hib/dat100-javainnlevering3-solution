@@ -42,12 +42,12 @@ public class LesFil {
 				String bruker = reader.nextLine();
 				String dato = reader.nextLine();
 				int likes = Integer.parseInt(reader.nextLine());
-
+				String tekst = reader.nextLine();
+				
 				if (line.equals(BILDE)) {
 					String bilde = reader.nextLine();
-					innlegg = new Bilde(id,bruker,dato, likes, bilde);
+					innlegg = new Bilde(id,bruker,dato, likes,tekst, bilde);
 				} else if (line.equals(TEKST)) {
-					String tekst = reader.nextLine();
 					innlegg = new Tekst(id, bruker, dato, likes, tekst);
 				} else {
 					System.out.println("Feil i format");
