@@ -48,7 +48,7 @@ public class Filer {
 			int antall = Integer.parseInt(line);
 
 			samling = new PersonSamling(antall);
-			Person person = null;
+			Innlegg person = null;
 
 			while (reader.hasNextLine()) {
 				line = reader.nextLine();
@@ -60,11 +60,11 @@ public class Filer {
 				if (line.equals(STUDENT)) {
 					int studentnummer = Integer.parseInt(reader.nextLine());
 					String klasse = reader.nextLine();
-					person = new Student(etternamn, fornamn, fodselsnummer, studentnummer, klasse);
+					person = new Bilde(etternamn, fornamn, fodselsnummer, studentnummer, klasse);
 				} else if (line.equals(LAERER)) {
 					int lonn = Integer.parseInt(reader.nextLine());
 					int kontonummer = Integer.parseInt(reader.nextLine());
-					person = new Laerer(etternamn, fornamn, fodselsnummer, lonn, kontonummer);
+					person = new Tekst(etternamn, fornamn, fodselsnummer, lonn, kontonummer);
 				} else {
 					System.out.println("Feil i format");
 				}

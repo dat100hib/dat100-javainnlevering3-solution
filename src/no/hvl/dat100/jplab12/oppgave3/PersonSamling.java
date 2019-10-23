@@ -3,28 +3,28 @@ package no.hvl.dat100.jplab12.oppgave3;
 public class PersonSamling {
 
 	private int nesteledig;
-	Person[] persontabell;
+	Innlegg[] persontabell;
 	private int LENGDE = 20;
 
 	public PersonSamling() {
 		nesteledig = 0;
-		persontabell = new Person[LENGDE];
+		persontabell = new Innlegg[LENGDE];
 	}
 
 	public PersonSamling(int lengde) {
 		nesteledig = 0;
-		persontabell = new Person[lengde];
+		persontabell = new Innlegg[lengde];
 	}
 
 	public int getAntall() {
 		return nesteledig;
 	}
 	
-	public Person[] getSamling() {
+	public Innlegg[] getSamling() {
 		return persontabell;
 	}
 	
-	public int finnPerson(Person p) {
+	public int finnPerson(Innlegg p) {
 
 		int index = -1;
 		int i = 0;
@@ -39,7 +39,7 @@ public class PersonSamling {
 		return index;
 	}
 
-	public boolean finnes(Person p) {
+	public boolean finnes(Innlegg p) {
 		return (finnPerson(p) >= 0);
 	}
 
@@ -54,7 +54,7 @@ public class PersonSamling {
 	}
 
 	public void utvid() {
-		Person[] nytabell = new Person[2 * persontabell.length];
+		Innlegg[] nytabell = new Innlegg[2 * persontabell.length];
 
 		for (int i = 0; i < nesteledig; i++) {
 			nytabell[i] = persontabell[i];
@@ -67,7 +67,7 @@ public class PersonSamling {
 		return (nesteledig < persontabell.length);
 	}
 
-	public boolean leggTil(Person p) {
+	public boolean leggTil(Innlegg p) {
 
 		boolean lagttil = false;
 		
@@ -80,7 +80,7 @@ public class PersonSamling {
 		return lagttil;
 	}
 	
-	public boolean leggTilUtvid(Person p) {
+	public boolean leggTilUtvid(Innlegg p) {
 
 		boolean lagttil = false;
 		
@@ -98,7 +98,7 @@ public class PersonSamling {
 		return lagttil;
 	}
 	
-	public void slett(Person p) {
+	public void slett(Innlegg p) {
 		
 		int index = finnPerson(p);
 		
