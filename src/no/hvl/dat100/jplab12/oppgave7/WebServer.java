@@ -3,7 +3,7 @@ package no.hvl.dat100.jplab12.oppgave7;
 import java.io.IOException;
 import java.net.ServerSocket;
 
-public class TCPServer {
+public class WebServer {
 	
 	public static void main(String[] args) {
 		
