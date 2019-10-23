@@ -1,4 +1,4 @@
-package no.hvl.dat100.jplab12.oppgave6;
+package no.hvl.dat100.jplab12.oppgave7;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -8,13 +8,28 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Date;
 
+import no.hvl.dat100.jplab12.oppgave2.Bilde;
+import no.hvl.dat100.jplab12.oppgave2.Tekst;
 import no.hvl.dat100.jplab12.oppgave3.Blogg;
+import no.hvl.dat100.jplab12.oppgave6.HtmlBlogg;
 
 public class BloggApp {
 
 	public static String toHTML() {
 		
-		return "<html> Got it </html>";
+		Tekst innlegg1 = new Tekst(1,"Sven-Olai","23-10-2019","Harald, hva er status for den obligatoriske innleveringen?");
+		Bilde innlegg2 = new Bilde(2,"Harald","24-10-2019","Ser bra ut! - har lagt ved output-eksempel fra enhetstester","https://www.west-norway.no/wp-content/uploads/2018/05/HVL-nettside.jpg");
+		
+		innlegg1.doLike();
+		innlegg1.doLike();
+		innlegg2.doLike();
+		
+		HtmlBlogg samling = new HtmlBlogg();
+		
+		samling.leggTil(innlegg1);
+		samling.leggTil(innlegg2);
+
+		return samling.toString();
 	}
 	
 	private ServerSocket welcomeSocket;
@@ -44,7 +59,7 @@ public class BloggApp {
 			String htmlbody = toHTML(); 
 			
 			String header = "HTTP/1.1 200 OK\n" + 
-					  "Server: Java HTTP Server from SSaurel : 1.0\n" + 
+					  "Server: DAT100 HTTP Server : 1.0\n" + 
 					  "Date: " + (new Date()) + "\n" + 
 					  "Content-type: " + "text/html" + "\n" + 
 			          "Content-length: " + htmlbody.length() + "\n" + 

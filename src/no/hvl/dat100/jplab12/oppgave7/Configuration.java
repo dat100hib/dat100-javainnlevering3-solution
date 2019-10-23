@@ -1,4 +1,4 @@
-package no.hvl.dat100.jplab12.oppgave6;
+package no.hvl.dat100.jplab12.oppgave7;
 
 public class Configuration {
 
