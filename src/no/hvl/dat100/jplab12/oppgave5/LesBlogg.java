@@ -1,7 +1,10 @@
 package no.hvl.dat100.jplab12.oppgave5;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
@@ -24,29 +27,28 @@ public class LesBlogg {
 
 		try {
 
-			File file = new File(MAPPE + filnavn);
-			Scanner reader = new Scanner(file);
+			BufferedReader reader = new BufferedReader(new FileReader(MAPPE + filnavn));
 
 			String line;
 
-			line = reader.nextLine();
+			line = reader.readLine();
 			int antall = Integer.parseInt(line);
 
 			samling = new Blogg(antall);
 			Innlegg innlegg = null;
 
-			while (reader.hasNextLine()) {
-				line = reader.nextLine();
+			while (antall > 0) {
+				line = reader.readLine();
 
-				int id = Integer.parseInt(reader.nextLine());
-				String bruker = reader.nextLine();
-				String dato = reader.nextLine();
-				int likes = Integer.parseInt(reader.nextLine());
-				String tekst = reader.nextLine();
-				
+				int id = Integer.parseInt(reader.readLine());
+				String bruker = reader.readLine();
+				String dato = reader.readLine();
+				int likes = Integer.parseInt(reader.readLine());
+				String tekst = reader.readLine();
+
 				if (line.equals(BILDE)) {
-					String bilde = reader.nextLine();
-					innlegg = new Bilde(id,bruker,dato, likes,tekst, bilde);
+					String bilde = reader.readLine();
+					innlegg = new Bilde(id, bruker, dato, likes, tekst, bilde);
 				} else if (line.equals(TEKST)) {
 					innlegg = new Tekst(id, bruker, dato, likes, tekst);
 				} else {
@@ -54,14 +56,16 @@ public class LesBlogg {
 				}
 
 				samling.leggTil(innlegg);
+				antall--;
 			}
 
 			reader.close();
 		} catch (FileNotFoundException e) {
 			System.out.println("Feil med fil");
+		} catch (IOException e) {
+			System.out.println("Feil med lese linje");
 		}
-		
-		// TODO: handle format exception
+
 		return samling;
 	}
 }

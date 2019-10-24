@@ -13,7 +13,7 @@ public class HtmlBlogg extends Blogg {
 			"<html>\n\t<head>\n\t\t<title>DAT100 Blogg</title>\n\t</head>\n\t<body>\n";
 	
 	private static String HTMLPOSTFIX = 
-			"\t<body>\n</html>";
+			"\t</body>\n</html>";
 	
 	@Override
 	public String toString() {
