@@ -5,7 +5,7 @@ import java.io.PrintWriter;
 
 import no.hvl.dat100.jplab12.oppgave3.*;
 
-public class SkrivFil {
+public class SkrivBlogg {
 
 	private static String MAPPE = System.getProperty("user.dir") + "/src/no/hvl/dat100/jplab12/tests/";
 

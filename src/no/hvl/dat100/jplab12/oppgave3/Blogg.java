@@ -45,6 +45,23 @@ public class Blogg {
 		return (finnInnlegg(innlegg) >= 0);
 	}
 
+	public boolean ledigPlass() {
+		return (nesteledig < innleggtabell.length);
+	}
+	
+	public boolean leggTil(Innlegg innlegg) {
+
+		boolean lagttil = false;
+		
+		if (!finnes(innlegg) && ledigPlass()) {
+			innleggtabell[nesteledig] = innlegg;
+			nesteledig++;
+			lagttil = true;
+		}
+		
+		return lagttil;
+	}
+	
 	public String toString() {
 		String text = Integer.toString(nesteledig) + "\n";
 
@@ -64,24 +81,6 @@ public class Blogg {
 
 		innleggtabell = nytabell;
 	}
-
-	public boolean ledigPlass() {
-		return (nesteledig < innleggtabell.length);
-	}
-
-	public boolean leggTil(Innlegg innlegg) {
-
-		boolean lagttil = false;
-		
-		if (!finnes(innlegg) && ledigPlass()) {
-			innleggtabell[nesteledig] = innlegg;
-			nesteledig++;
-			lagttil = true;
-		}
-		
-		return lagttil;
-	}
-	
 	public boolean leggTilUtvid(Innlegg innlegg) {
 
 		boolean lagttil = false;
@@ -111,7 +110,7 @@ public class Blogg {
 		}
 	}
 	
-	public int[] search(String user) {
+	public int[] search(String keyword) {
 		
 		// TODO: get list of all entries from a given user
 		return null;

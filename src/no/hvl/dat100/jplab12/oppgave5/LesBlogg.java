@@ -11,7 +11,7 @@ import no.hvl.dat100.jplab12.oppgave3.*;
 
 import javax.swing.JOptionPane;
 
-public class LesFil {
+public class LesBlogg {
 
 	private static String MAPPE = System.getProperty("user.dir") + "/src/no/hvl/dat100/jplab12/tests/";
 
