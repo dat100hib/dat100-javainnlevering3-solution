@@ -21,7 +21,7 @@ public class BloggApp {
 				"Harald, hva er status for den siste obligatoriske innleveringen?");
 		Bilde innlegg2 = new Bilde(2, "Harald", "24-10-2019",
 				"Ser bra ut! - har lagt ved output-eksempel fra enhetstester",
-				"https://cdn1.imggmi.com/uploads/2019/10/24/c83cb27d47717109e42b6fb7a76453ca-full.png");
+				"https://cdn1.imggmi.com/uploads/2019/10/25/79e039f3f39c957a19a4958c048026bf-full.png");
 
 		innlegg1.doLike();
 		innlegg1.doLike();
