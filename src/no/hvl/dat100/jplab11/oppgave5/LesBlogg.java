@@ -16,18 +16,16 @@ import javax.swing.JOptionPane;
 
 public class LesBlogg {
 
-	private static String MAPPE = System.getProperty("user.dir") + "/src/no/hvl/dat100/tests/";
-
 	private static String TEKST = "TEKST";
 	private static String BILDE = "BILDE";
 
-	public static Blogg les(String filnavn) {
+	public static Blogg les(String mappe, String filnavn) {
 
 		Blogg samling = null;
 
 		try {
 
-			BufferedReader reader = new BufferedReader(new FileReader(MAPPE + filnavn));
+			BufferedReader reader = new BufferedReader(new FileReader(mappe + filnavn));
 
 			String line;
 
