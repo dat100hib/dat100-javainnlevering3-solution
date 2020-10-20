@@ -1,4 +1,4 @@
-package no.hvl.dat100.jplab12.oppgave1;
+package no.hvl.dat100.jplab11.oppgave1;
 
 public abstract class Innlegg {
 	

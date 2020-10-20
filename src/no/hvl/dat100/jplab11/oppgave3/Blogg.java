@@ -1,6 +1,6 @@
-package no.hvl.dat100.jplab12.oppgave3;
+package no.hvl.dat100.jplab11.oppgave3;
 
-import no.hvl.dat100.jplab12.oppgave1.*;
+import no.hvl.dat100.jplab11.oppgave1.*;
 
 public class Blogg {
 

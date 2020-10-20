@@ -1,4 +1,4 @@
-package no.hvl.dat100.jplab12.oppgave2;
+package no.hvl.dat100.jplab11.oppgave2;
 
 public class Bilde extends Tekst {
 
