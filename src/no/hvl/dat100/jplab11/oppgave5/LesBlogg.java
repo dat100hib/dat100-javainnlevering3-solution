@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
 
 public class LesBlogg {
 
-	private static String MAPPE = System.getProperty("user.dir") + "/src/no/hvl/dat100/jplab12/tests/";
+	private static String MAPPE = System.getProperty("user.dir") + "/src/no/hvl/dat100/tests/";
 
 	private static String TEKST = "TEKST";
 	private static String BILDE = "BILDE";
